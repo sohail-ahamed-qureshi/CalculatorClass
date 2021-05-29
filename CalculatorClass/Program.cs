@@ -4,11 +4,24 @@ namespace CalculatorClass
 {
     abstract class Calculator
     {
+        /// <summary>
+        /// main abstract class calculator
+        /// having a multiplication abstract method
+        /// </summary>
+        /// <param name="firstNum"></param>
+        /// <param name="secondNum"></param>
         public abstract void Mul( int firstNum, int secondNum);
     }
 
     abstract class Multiplication : Calculator
     {
+        /// <summary>
+        /// abstracting method from parent class Calculator()
+        /// overriding mul() method from Calculator() class
+        /// and also performing abstract for its child class
+        /// </summary>
+        /// <param name="firstNum"></param>
+        /// <param name="secondNum"></param>
         public override void Mul(int firstNum, int secondNum)
         {
             int result = firstNum * secondNum;
@@ -21,6 +34,13 @@ namespace CalculatorClass
 
     class Division : Multiplication
     {
+        /// <summary>
+        /// overriding div() method from parent class and also mul() 
+        /// method from its parent class.
+        /// performing multilevel abstraction.
+        /// </summary>
+        /// <param name="firstNum"></param>
+        /// <param name="secondNum"></param>
         public override void Div(int firstNum, int secondNum)
         {
             int result = firstNum / secondNum;
